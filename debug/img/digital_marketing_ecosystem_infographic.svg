@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 950" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="panelBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B2D"/>
+      <stop offset="50%" stop-color="#0b1342"/>
+      <stop offset="100%" stop-color="#050821"/>
+    </linearGradient>
+
+    <!-- Card Glass Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E59CC"/>
+      <stop offset="100%" stop-color="#25D6FF"/>
+    </linearGradient>
+
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+
+    <filter id="shadowFilter" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#25D6FF" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Main Dark Container Card -->
+  <rect x="10" y="10" width="580" height="930" rx="32" fill="url(#panelBgGrad)" stroke="rgba(37,214,255,0.2)" stroke-width="2" filter="url(#shadowFilter)"/>
+
+  <!-- Background Ambient Pattern Dots -->
+  <g opacity="0.15">
+    <circle cx="80" cy="80" r="2" fill="#25D6FF"/>
+    <circle cx="140" cy="80" r="2" fill="#25D6FF"/>
+    <circle cx="200" cy="80" r="2" fill="#25D6FF"/>
+    <circle cx="500" cy="860" r="3" fill="#1E59CC"/>
+    <circle cx="520" cy="890" r="2" fill="#25D6FF"/>
+  </g>
+
+  <!-- Header Banner -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="520" height="70" rx="20" fill="url(#glassGrad)" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="45" cy="35" r="20" fill="rgba(37,214,255,0.15)"/>
+    <path d="M 37,35 L 43,41 L 54,29" fill="none" stroke="#25D6FF" stroke-width="3" stroke-linecap="round"/>
+    <text x="80" y="32" font-family="Montserrat, sans-serif" font-size="12" font-weight="800" fill="#25D6FF" letter-spacing="2">FULL-SPECTRUM ARCHITECTURE</text>
+    <text x="80" y="52" font-family="Montserrat, sans-serif" font-size="17" font-weight="900" fill="#ffffff">DIGITAL GROWTH ECOSYSTEM</text>
+  </g>
+
+  <!-- Vertical Central Flow Line -->
+  <line x1="300" y1="130" x2="300" y2="820" stroke="url(#blueGlow)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- NODE 1: SEO & Organic Dominance (Y: 150) -->
+  <g transform="translate(40, 140)" filter="url(#shadowFilter)">
+    <rect x="0" y="0" width="520" height="120" rx="20" fill="url(#glassGrad)" stroke="rgba(37,99,235,0.3)"/>
+    <!-- Icon Box -->
+    <rect x="20" y="25" width="70" height="70" rx="16" fill="url(#blueGlow)"/>
+    <!-- Search Magnifying Glass Icon -->
+    <circle cx="52" cy="56" r="14" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <line x1="62" y1="66" x2="72" y2="76" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Content -->
+    <text x="110" y="45" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#25D6FF" letter-spacing="1">STAGE 01 — ORGANIC REACH</text>
+    <text x="110" y="68" font-family="Montserrat, sans-serif" font-size="16" font-weight="900" fill="#ffffff">Search Engine Optimization (SEO)</text>
+    <text x="110" y="88" font-family="Montserrat, sans-serif" font-size="12" font-weight="500" fill="#94a3b8">24/7 Organic SERP Dominance &amp; High-Intent Traffic</text>
+    <!-- Metric Badge -->
+    <rect x="390" y="35" width="110" height="50" rx="12" fill="#070B2D" stroke="rgba(37,214,255,0.4)"/>
+    <text x="445" y="56" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">ORGANIC TRAFFIC</text>
+    <text x="445" y="74" font-family="Montserrat, sans-serif" font-size="15" font-weight="900" fill="#25D6FF" text-anchor="middle">+340%</text>
+  </g>
+
+  <!-- NODE 2: Google Adwords / PPC (Y: 280) -->
+  <g transform="translate(40, 275)" filter="url(#shadowFilter)">
+    <rect x="0" y="0" width="520" height="120" rx="20" fill="url(#glassGrad)" stroke="rgba(124,58,237,0.3)"/>
+    <rect x="20" y="25" width="70" height="70" rx="16" fill="url(#purpleGlow)"/>
+    <!-- Target Cursor Icon -->
+    <circle cx="55" cy="60" r="14" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M 55,40 L 55,46 M 55,74 L 55,80 M 35,60 L 41,60 M 69,60 L 75,60" stroke="#ffffff" stroke-width="3"/>
+    <!-- Content -->
+    <text x="110" y="45" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#c084fc" letter-spacing="1">STAGE 02 — PAID ACCELERATION</text>
+    <text x="110" y="68" font-family="Montserrat, sans-serif" font-size="16" font-weight="900" fill="#ffffff">Google AdWords &amp; PPC Campaigns</text>
+    <text x="110" y="88" font-family="Montserrat, sans-serif" font-size="12" font-weight="500" fill="#94a3b8">Instant Laser-Targeted Funnel Conversions</text>
+    <!-- Metric Badge -->
+    <rect x="390" y="35" width="110" height="50" rx="12" fill="#070B2D" stroke="rgba(192,132,252,0.4)"/>
+    <text x="445" y="56" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">CAMPAIGN ROI</text>
+    <text x="445" y="74" font-family="Montserrat, sans-serif" font-size="15" font-weight="900" fill="#c084fc" text-anchor="middle">4.8x ROI</text>
+  </g>
+
+  <!-- NODE 3: Social Media & Viral Marketing (Y: 410) -->
+  <g transform="translate(40, 410)" filter="url(#shadowFilter)">
+    <rect x="0" y="0" width="520" height="120" rx="20" fill="url(#glassGrad)" stroke="rgba(5,150,105,0.3)"/>
+    <rect x="20" y="25" width="70" height="70" rx="16" fill="url(#greenGlow)"/>
+    <!-- Share/Users Icon -->
+    <circle cx="45" cy="50" r="6" fill="#ffffff"/>
+    <circle cx="65" cy="40" r="6" fill="#ffffff"/>
+    <circle cx="65" cy="70" r="6" fill="#ffffff"/>
+    <line x1="49" y1="47" x2="61" y2="42" stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="49" y1="53" x2="61" y2="67" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Content -->
+    <text x="110" y="45" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#34d399" letter-spacing="1">STAGE 03 — SOCIAL &amp; COMMUNITY</text>
+    <text x="110" y="68" font-family="Montserrat, sans-serif" font-size="16" font-weight="900" fill="#ffffff">SMM, Facebook &amp; LinkedIn Ads</text>
+    <text x="110" y="88" font-family="Montserrat, sans-serif" font-size="12" font-weight="500" fill="#94a3b8">Multi-Platform Brand Identity &amp; Viral Reach</text>
+    <!-- Metric Badge -->
+    <rect x="390" y="35" width="110" height="50" rx="12" fill="#070B2D" stroke="rgba(52,211,153,0.4)"/>
+    <text x="445" y="56" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">ENGAGEMENT</text>
+    <text x="445" y="74" font-family="Montserrat, sans-serif" font-size="15" font-weight="900" fill="#34d399" text-anchor="middle">2.8M+</text>
+  </g>
+
+  <!-- NODE 4: ORM & Brand Trust (Y: 545) -->
+  <g transform="translate(40, 545)" filter="url(#shadowFilter)">
+    <rect x="0" y="0" width="520" height="120" rx="20" fill="url(#glassGrad)" stroke="rgba(234,88,12,0.3)"/>
+    <rect x="20" y="25" width="70" height="70" rx="16" fill="url(#orangeGlow)"/>
+    <!-- Shield Icon -->
+    <path d="M 55,40 L 73,47 C 73,63 65,75 55,80 C 45,75 37,63 37,47 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 48,58 L 53,63 L 63,53" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Content -->
+    <text x="110" y="45" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#fb923c" letter-spacing="1">STAGE 04 — BRAND AUTHORITY</text>
+    <text x="110" y="68" font-family="Montserrat, sans-serif" font-size="16" font-weight="900" fill="#ffffff">Online Reputation &amp; Video Marketing</text>
+    <text x="110" y="88" font-family="Montserrat, sans-serif" font-size="12" font-weight="500" fill="#94a3b8">Elevate Search Results &amp; YouTube Outreach</text>
+    <!-- Metric Badge -->
+    <rect x="390" y="35" width="110" height="50" rx="12" fill="#070B2D" stroke="rgba(251,146,60,0.4)"/>
+    <text x="445" y="56" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">TRUST SCORE</text>
+    <text x="445" y="74" font-family="Montserrat, sans-serif" font-size="15" font-weight="900" fill="#fb923c" text-anchor="middle">99.4%</text>
+  </g>
+
+  <!-- Bottom Ecosystem Impact Card (Y: 685) -->
+  <g transform="translate(40, 685)" filter="url(#neonGlow)">
+    <rect x="0" y="0" width="520" height="140" rx="24" fill="linear-gradient(135deg, #070B2D 0%, #1E59CC 100%)" stroke="rgba(37,214,255,0.5)" stroke-width="2"/>
+    
+    <text x="40" y="44" font-family="Montserrat, sans-serif" font-size="12" font-weight="800" fill="#25D6FF" letter-spacing="2">MEASURABLE ROI GUARANTEE</text>
+    <text x="40" y="75" font-family="Montserrat, sans-serif" font-size="24" font-weight="900" fill="#ffffff">360° TOTAL REVENUE MULTIPLIER</text>
+    <text x="40" y="105" font-family="Montserrat, sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">Integrated strategy turning visitors into loyal lifetime customers.</text>
+    
+    <!-- Big Stat -->
+    <rect x="380" y="30" width="115" height="80" rx="16" fill="#070B2D" stroke="rgba(37,214,255,0.5)"/>
+    <text x="437" y="60" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">TOTAL BOOST</text>
+    <text x="437" y="92" font-family="Montserrat, sans-serif" font-size="24" font-weight="900" fill="#25D6FF" text-anchor="middle">+450%</text>
+  </g>
+</svg>

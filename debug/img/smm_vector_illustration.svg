@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="smmBgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#25d6ff" stop-opacity="0.02"/>
+    </linearGradient>
+    
+    <linearGradient id="phoneBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#070b2d"/>
+    </linearGradient>
+
+    <linearGradient id="smmHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E59CC"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <linearGradient id="fbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1877f2"/>
+      <stop offset="100%" stop-color="#0b5ed7"/>
+    </linearGradient>
+
+    <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f09433"/>
+      <stop offset="25%" stop-color="#e6683c"/>
+      <stop offset="50%" stop-color="#dc2743"/>
+      <stop offset="75%" stop-color="#cc2366"/>
+      <stop offset="100%" stop-color="#bc1888"/>
+    </linearGradient>
+    
+    <filter id="smmShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#070b2d" flood-opacity="0.16"/>
+    </filter>
+
+    <filter id="smmGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#7c3aed" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Background Shapes -->
+  <circle cx="400" cy="300" r="260" fill="url(#smmBgGlow)"/>
+  <circle cx="160" cy="140" r="8" fill="#ec4899" opacity="0.6"/>
+  <circle cx="670" cy="460" r="6" fill="#25D6FF" opacity="0.5"/>
+  
+  <!-- Interconnected Network Orbit Lines -->
+  <path d="M 180,260 Q 280,180 400,240 T 620,220" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6"/>
+  <path d="M 160,380 Q 300,450 400,360 T 640,380" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6"/>
+
+  <!-- Center Smartphone Framework -->
+  <g filter="url(#smmShadow)">
+    <rect x="270" y="60" width="260" height="480" rx="36" fill="url(#phoneBodyGrad)" stroke="#334155" stroke-width="4"/>
+    <rect x="282" y="72" width="236" height="456" rx="26" fill="#ffffff"/>
+    <!-- Notch -->
+    <path d="M 350,72 L 450,72 C 450,72 445,86 435,86 L 365,86 C 355,86 350,72 350,72 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- Phone Screen Content -->
+  <!-- App Header -->
+  <rect x="282" y="96" width="236" height="60" fill="url(#smmHeaderGrad)"/>
+  <text x="302" y="132" font-family="Montserrat, sans-serif" font-size="14" font-weight="900" fill="#ffffff" letter-spacing="1">SOCIAL CAMPAIGN</text>
+  <circle cx="494" cy="126" r="12" fill="rgba(255,255,255,0.2)"/>
+  <path d="M 489,126 L 499,126 M 494,121 L 494,131" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Stats Grid on Screen -->
+  <rect x="296" y="172" width="102" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="310" y="195" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#64748b">TOTAL REACH</text>
+  <text x="310" y="222" font-family="Montserrat, sans-serif" font-size="18" font-weight="900" fill="#1E59CC">1.2M+</text>
+
+  <rect x="404" y="172" width="102" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="418" y="195" font-family="Montserrat, sans-serif" font-size="10" font-weight="700" fill="#64748b">ENGAGEMENT</text>
+  <text x="418" y="222" font-family="Montserrat, sans-serif" font-size="18" font-weight="900" fill="#7c3aed">98.4%</text>
+
+  <!-- Feed Card Mockup -->
+  <rect x="296" y="254" width="210" height="240" rx="14" fill="#ffffff" stroke="#e2e8f0" filter="url(#smmShadow)"/>
+  <circle cx="320" cy="278" r="12" fill="#2563eb"/>
+  <rect x="340" y="270" width="90" height="8" rx="4" fill="#0f172a"/>
+  <rect x="340" y="282" width="60" height="6" rx="3" fill="#94a3b8"/>
+  <!-- Feed Post Image -->
+  <rect x="308" y="300" width="186" height="110" rx="8" fill="url(#smmHeaderGrad)"/>
+  <path d="M 360,335 L 440,335 M 380,365 L 420,365" stroke="rgba(255,255,255,0.4)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Action Icons -->
+  <circle cx="324" cy="430" r="10" fill="#fee2e2"/>
+  <path d="M 320,428 C 320,425 322,423 324,425 C 326,423 328,425 328,428 C 328,432 324,435 324,435 C 324,435 320,432 320,428 Z" fill="#ef4444"/>
+  <text x="340" y="434" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#0f172a">42.8k Likes</text>
+
+  <!-- Floating 3D Social Media Platform Badges around Phone -->
+  <!-- Facebook Badge -->
+  <g transform="translate(140, 160)" filter="url(#smmGlow)">
+    <circle cx="36" cy="36" r="36" fill="url(#fbGrad)"/>
+    <text x="36" y="48" font-family="Montserrat, sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle">f</text>
+  </g>
+
+  <!-- Instagram Badge -->
+  <g transform="translate(580, 140)" filter="url(#smmGlow)">
+    <rect x="0" y="0" width="72" height="72" rx="20" fill="url(#instaGrad)"/>
+    <rect x="18" y="18" width="36" height="36" rx="10" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="36" cy="36" r="10" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="46" cy="26" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- LinkedIn Badge -->
+  <g transform="translate(130, 340)" filter="url(#smmShadow)">
+    <rect x="0" y="0" width="64" height="64" rx="16" fill="#0A66C2"/>
+    <text x="32" y="44" font-family="Montserrat, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">in</text>
+  </g>
+
+  <!-- YouTube / Video Badge -->
+  <g transform="translate(590, 320)" filter="url(#smmShadow)">
+    <rect x="0" y="0" width="76" height="54" rx="16" fill="#FF0000"/>
+    <polygon points="32,18 48,27 32,36" fill="#ffffff"/>
+  </g>
+
+  <!-- Viral Megaphone Banner (Top Left Floating) -->
+  <g transform="translate(180, 70)" filter="url(#smmGlow)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#070B2D"/>
+    <text x="70" y="26" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#25D6FF" text-anchor="middle">VIRAL CAMPAIGNS</text>
+  </g>
+
+  <!-- Floating Heart Bubble -->
+  <g transform="translate(540, 260)" filter="url(#smmShadow)">
+    <circle cx="24" cy="24" r="24" fill="#ef4444"/>
+    <path d="M 16,21 C 16,16 20,13 24,17 C 28,13 32,16 32,21 C 32,27 24,32 24,32 C 24,32 16,27 16,21 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Floating Comment Bubble -->
+  <g transform="translate(200, 460)" filter="url(#smmShadow)">
+    <rect x="0" y="0" width="130" height="40" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="20" cy="20" r="10" fill="#2563eb"/>
+    <text x="40" y="24" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#0f172a">+8.4k Comments</text>
+  </g>
+</svg>

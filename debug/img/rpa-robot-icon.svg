@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Antenna -->
+  <line x1="32" y1="4" x2="32" y2="14" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="4" r="3.5" fill="#2DD4BF"/>
+  <!-- Ear panels -->
+  <rect x="8"  y="20" width="6" height="12" rx="3" fill="#C4B5FD" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="50" y="20" width="6" height="12" rx="3" fill="#C4B5FD" stroke="#7C3AED" stroke-width="1.5"/>
+  <!-- Robot head -->
+  <rect x="14" y="14" width="36" height="30" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+  <!-- Eyes -->
+  <rect x="18" y="20" width="11" height="9" rx="3" fill="#7C3AED"/>
+  <rect x="35" y="20" width="11" height="9" rx="3" fill="#7C3AED"/>
+  <!-- Eye glow -->
+  <circle cx="22" cy="24" r="2.5" fill="#2DD4BF" opacity="0.85"/>
+  <circle cx="39" cy="24" r="2.5" fill="#2DD4BF" opacity="0.85"/>
+  <!-- Mouth (circuit bar) -->
+  <rect x="18" y="34" width="28" height="4" rx="2" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1"/>
+  <circle cx="25" cy="36" r="1.5" fill="#7C3AED"/>
+  <circle cx="32" cy="36" r="1.5" fill="#2DD4BF"/>
+  <circle cx="39" cy="36" r="1.5" fill="#7C3AED"/>
+  <!-- Neck -->
+  <rect x="27" y="44" width="10" height="6" rx="2" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <!-- Body -->
+  <rect x="10" y="50" width="44" height="12" rx="4" fill="#DDD6FE" stroke="#7C3AED" stroke-width="2"/>
+  <!-- Chest indicators -->
+  <circle cx="24" cy="56" r="3" fill="#2DD4BF"/>
+  <circle cx="32" cy="56" r="3" fill="#7C3AED"/>
+  <circle cx="40" cy="56" r="3" fill="#2DD4BF"/>
+</svg>

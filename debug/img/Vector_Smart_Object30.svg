@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.1;fill:#FFFFFF;}
+	.st2{fill:url(#SVGID_2_);}
+</style>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="303.881" y1="761.9561" x2="600.7596" y2="659.0833">
+		<stop  offset="1.800058e-03" style="stop-color:#0261D1"/>
+		<stop  offset="0.059" style="stop-color:#025DC8"/>
+		<stop  offset="0.3474" style="stop-color:#024AA0"/>
+		<stop  offset="0.6102" style="stop-color:#023D82"/>
+		<stop  offset="0.8365" style="stop-color:#023570"/>
+		<stop  offset="1" style="stop-color:#02326A"/>
+	</linearGradient>
+	<path class="st0" d="M281.08,721.33c0,0,86,24.5,181-91.5c0,0,19.91-25.71,50.64-46.76c22.8-15.61,51.55-28.66,82.56-26.74v214.5
+		C595.28,770.83,518.58,837.83,281.08,721.33z"/>
+	<path class="st1" d="M512.85,582.14c0,0,14.03,92.01-92.47,192.51c0,0,20.84,6.49,28.97,6.49c0,0,86.39-22.5,145.7-60.5v-166.5
+		C595.05,554.14,540.96,555.21,512.85,582.14z"/>
+</g>
+<g>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="22.7967" y1="552.7061" x2="319.6754" y2="449.8333" gradientTransform="matrix(-1 0 0 1 314.197 0)">
+		<stop  offset="1.800058e-03" style="stop-color:#0261D1"/>
+		<stop  offset="0.059" style="stop-color:#025DC8"/>
+		<stop  offset="0.3474" style="stop-color:#024AA0"/>
+		<stop  offset="0.6102" style="stop-color:#023D82"/>
+		<stop  offset="0.8365" style="stop-color:#023570"/>
+		<stop  offset="1" style="stop-color:#02326A"/>
+	</linearGradient>
+	<path class="st2" d="M314.2,512.08c0,0-86,24.5-181-91.5c0,0-19.91-25.71-50.64-46.76C59.76,358.21,31.01,345.17,0,347.08l0,214.5
+		C0,561.58,76.7,628.58,314.2,512.08z"/>
+	<path class="st1" d="M82.43,372.89c0,0-14.03,92.01,92.47,192.51c0,0-20.84,6.49-28.97,6.49c0,0-86.39-22.5-145.7-60.5l0-166.5
+		C0.23,344.89,54.32,345.96,82.43,372.89z"/>
+</g>
+</svg>

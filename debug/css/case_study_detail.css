@@ -1,0 +1,716 @@
+/* ================================================================
+   CASE STUDY DETAILS STYLES
+   ================================================================ */
+
+.cs-detail-page {
+    background: #04071d;
+    color: #ffffff;
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ---- HERO SECTION ---- */
+.cs-detail-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+    overflow: hidden;
+    padding: 140px 5% 100px;
+}
+.cs-hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+}
+.cs-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(4, 7, 29, 0.95) 0%, rgba(4, 7, 29, 0.6) 40%, transparent 75%);
+    z-index: 1;
+}
+
+.cs-detail-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+.cs-detail-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(40px, 5.5vw, 68px);
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    animation: fadeInUp 1s ease forwards;
+}
+.cs-detail-accent {
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.cs-detail-intro {
+    font-size: 18px;
+    color: rgba(255,255,255,.8);
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+/* ---- CONTENT SECTIONS ---- */
+.cs-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 2;
+}
+.cs-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+.cs-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+.cs-text {
+    font-size: 17px;
+    color: rgba(255,255,255,.75);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ---- GLASS CARDS ---- */
+.cs-info-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 35px 30px;
+    height: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+.cs-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(56, 189, 248, 0.5);
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.04);
+}
+.cs-info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(56, 189, 248, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    font-size: 22px;
+}
+.cs-info-card h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* ---- SOLUTION STEPS ---- */
+.cs-step {
+    display: flex;
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.02);
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 4px solid #2563eb;
+    transition: all 0.3s ease;
+}
+.cs-step:hover {
+    background: rgba(255,255,255,0.05);
+    border-left-color: #38bdf8;
+    transform: translateX(10px);
+}
+.cs-step-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    color: #38bdf8;
+    font-size: 24px;
+}
+.cs-step-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.cs-step-content p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: rgba(255,255,255,.7);
+    line-height: 1.7;
+}
+
+/* ---- RESULTS WRAPPER STYLES ---- */
+.cs-results-wrapper {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.05));
+    border-radius: 24px;
+    padding: 60px 40px;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-top: 40px;
+}
+.cs-result-stat {
+    text-align: center;
+    padding: 20px;
+}
+.cs-result-stat h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+.cs-result-stat p {
+    font-size: 18px;
+    color: rgba(255,255,255,.8);
+    font-weight: 600;
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SOLUTION ALTERNATING LAYOUT & ANIMATIONS */
+.cs-step-row {
+    position: relative;
+    padding: 40px 0;
+}
+.cs-step-content-alt {
+    padding: 40px;
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.cs-step-content-alt:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    font-size: 140px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255,255,255,0.02);
+    line-height: 1;
+    z-index: 0;
+}
+.cs-step-content-alt h4 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+.cs-step-content-alt p {
+    position: relative;
+    z-index: 1;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.cs-step-animation {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(56, 189, 248, 0.02));
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px dashed rgba(255,255,255,0.1);
+}
+.cs-anim-icon-center {
+    font-size: 70px;
+    color: #38bdf8;
+    z-index: 5;
+    background: rgba(0,0,0,0.6);
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+/* RESULTS CARDS & ANIMATION */
+.cs-result-card {
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 4px; /* padding for the border effect */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+.cs-result-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.cs-result-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(transparent, rgba(56, 189, 248, 0.4), transparent 30%);
+    animation: rotateGlow 4s linear infinite;
+    pointer-events: none;
+}
+@keyframes rotateGlow {
+    100% { transform: rotate(360deg); }
+}
+.cs-result-inner {
+    position: relative;
+    z-index: 1;
+    background: #04071d; /* same as body bg to block the glow inside */
+    border-radius: 20px;
+    padding: 40px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cs-result-inner h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cs-result-inner p {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* BENEFITS GRID */
+.benefit-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    border-left: 4px solid #2563eb;
+    transition: all 0.3s ease;
+    height: calc(100% - 25px);
+}
+.benefit-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-left-color: #38bdf8;
+    transform: translateX(10px);
+}
+.benefit-icon {
+    font-size: 28px;
+    color: #38bdf8;
+    margin-right: 20px;
+    margin-top: 5px;
+    animation: bounceIcon 3s infinite ease-in-out;
+    flex-shrink: 0;
+}
+@keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.benefit-content h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.benefit-content p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ---- ARCHITECTURE TABLE ---- */
+.cs-arch-table {
+    background-color: rgba(15, 23, 42, 0.8);
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    margin-bottom: 0;
+}
+.cs-arch-table th {
+    background-color: rgba(30, 41, 59, 0.9);
+    border-color: #334155;
+    color: #38bdf8;
+    font-weight: 700;
+}
+.cs-arch-table td {
+    border-color: #334155;
+}
+
+/* ================================================================
+   RESPONSIVENESS (BELOW 1300px BREAKPOINTS)
+   ================================================================ */
+
+@media (max-width: 1299px) {
+    /* Info cards spacing adjustment */
+    .cs-info-card {
+        padding: 30px 24px;
+    }
+    .cs-detail-title {
+        font-size: clamp(32px, 5vw, 56px);
+    }
+    .cs-result-inner h3 {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 991px) {
+    .cs-detail-hero {
+        padding: 120px 24px 70px;
+        min-height: auto;
+    }
+    .cs-detail-title {
+        font-size: clamp(28px, 6vw, 42px);
+    }
+    .cs-section {
+        padding: 60px 0;
+    }
+    .cs-section-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .cs-info-card {
+        padding: 25px 20px;
+    }
+    .cs-info-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .cs-result-inner h3 {
+        font-size: 46px;
+    }
+    .cs-result-inner p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cs-detail-hero {
+        padding: 100px 16px 50px;
+    }
+    .cs-detail-title {
+        font-size: clamp(24px, 7vw, 36px);
+    }
+    .cs-detail-intro {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+    .cs-step-row {
+        padding: 15px 0;
+    }
+    .cs-step-content-alt {
+        padding: 25px 20px;
+        margin-bottom: 15px;
+    }
+    .step-number {
+        font-size: 90px;
+        top: -10px;
+    }
+    .cs-step-animation {
+        height: 220px;
+    }
+    .cs-anim-icon-center {
+        width: 90px;
+        height: 90px;
+        font-size: 50px;
+    }
+    .benefit-card {
+        height: auto !important;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .benefit-icon {
+        font-size: 24px;
+        margin-right: 15px;
+    }
+    .cs-result-inner h3 {
+        font-size: 40px;
+    }
+    .cs-result-inner p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .cs-arch-table th, .cs-arch-table td {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+    }
+    .benefit-card {
+        padding: 18px;
+        margin-bottom: 15px;
+    }
+    .benefit-icon {
+        font-size: 22px;
+        margin-right: 12px;
+    }
+    .benefit-content h5 {
+        font-size: 16px;
+    }
+    .benefit-content p {
+        font-size: 14px;
+    }
+    .cs-detail-intro {
+        font-size: 15px;
+    }
+
+    /* Animation Containers Responsiveness Overrides */
+    .scanner-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 350px;
+        padding: 20px;
+    }
+    .scanner-container .detection-data {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        min-width: 0;
+    }
+    
+    .copra-scanner-container {
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    .copra-scanner-container .dashboard-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .copra-scanner-container .machine-bed {
+        position: relative;
+        bottom: auto;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .copra-scanner-container .scanner-arm {
+        top: 20px;
+        height: 100px;
+    }
+    
+    .monitoring-anim-container {
+        height: 280px;
+    }
+    .monitoring-anim-container .ep-1 { top: 20px; left: 15px; }
+    .monitoring-anim-container .ep-2 { bottom: 20px; left: 15px; }
+    .monitoring-anim-container .ep-3 { top: 20px; right: 15px; }
+    .monitoring-anim-container .ep-4 { bottom: 20px; right: 15px; }
+    .monitoring-anim-container .risk-dashboard {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 150px;
+        right: auto;
+    }
+    .monitoring-anim-container .central-server {
+        transform: scale(0.7);
+    }
+    .monitoring-anim-container .data-packet {
+        display: none;
+    }
+    
+    .medical-anim-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    .medical-anim-container .xray-plate {
+        transform: scale(0.9);
+        margin: 0 auto;
+    }
+    .medical-anim-container .dashboard-panel {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+    
+    .autopilot-anim-container {
+        height: 280px;
+    }
+    .autopilot-anim-container .hud-overlay {
+        top: 10px;
+        left: 10px;
+        padding: 8px;
+        font-size: 10px;
+        border-left-width: 2px;
+    }
+    .autopilot-anim-container .auto-car {
+        transform: translateX(-50%) scale(0.7);
+        bottom: 20px;
+    }
+    .autopilot-anim-container .obstacle {
+        transform: scale(0.7);
+    }
+    
+    .rfid-scanner-container {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        min-height: 380px;
+    }
+    .rfid-scanner-container .rfid-dashboard {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .rfid-scanner-container .rfid-gate {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+    .rfid-scanner-container .logistics-truck {
+        display: none;
+    }
+    
+    .vehicle-scanner-container {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        min-height: 380px;
+    }
+    .vehicle-scanner-container .data-overlay {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        opacity: 1 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+    .vehicle-scanner-container .inspection-gate {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+    .vehicle-scanner-container .vehicle-chassis {
+        display: none;
+    }
+    
+    .chatbot-ui-container {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .chatbot-ui-container .nlp-nodes {
+        display: none;
+    }
+    .chatbot-ui-container .chat-phone {
+        transform: scale(0.9);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 479px) {
+    .cs-detail-title {
+        font-size: clamp(20px, 8vw, 30px);
+    }
+    .cs-section-title {
+        font-size: 24px;
+    }
+    .cs-step-content-alt h4 {
+        font-size: 20px;
+    }
+    .cs-step-content-alt p {
+        font-size: 14px;
+    }
+}
+

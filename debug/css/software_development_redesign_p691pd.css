@@ -1,0 +1,1170 @@
+/* Scoped stylesheet for Software Development redesign */
+
+.software-dev-redesign-page {
+  background-color: #030914;
+  color: #f8fafc;
+  font-family: 'Inter', 'Nunito Sans', sans-serif;
+  overflow: clip;
+  position: relative;
+}
+
+/* Base Styles & Utility classes */
+.software-dev-redesign-page h1,
+.software-dev-redesign-page h2,
+.software-dev-redesign-page h3,
+.software-dev-redesign-page h4,
+.software-dev-redesign-page h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.software-dev-redesign-page .text-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.software-dev-redesign-page .glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.software-dev-redesign-page .glass-panel:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+/* Background decoration */
+.software-dev-redesign-page .bg-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(3, 9, 20, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.software-dev-redesign-page .bg-glow-1 {
+  top: 10%;
+  left: -100px;
+}
+
+.software-dev-redesign-page .bg-glow-2 {
+  top: 45%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(3, 9, 20, 0) 70%);
+}
+
+.software-dev-redesign-page .bg-glow-3 {
+  bottom: 15%;
+  left: 20%;
+}
+
+.software-dev-redesign-page .scroll-progress-container {
+  display: none !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 9999;
+}
+
+.software-dev-redesign-page .scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  transition: width 0.1s ease;
+}
+
+/* Particle Canvas background */
+.software-dev-redesign-page #hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Hero Section */
+.software-dev-redesign-page .hero-revamp {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 0 90px;
+  background: radial-gradient(circle at 10% 20%, rgba(6, 18, 41, 0.7) 0%, rgba(3, 9, 20, 1) 95%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.software-dev-redesign-page .hero-revamp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.software-dev-redesign-page .hero-title-container {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.software-dev-redesign-page h1.hero-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.software-dev-redesign-page .hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.software-dev-redesign-page .hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.software-dev-redesign-page .btn-primary-revamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #166ce7 0%, #0150a9 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  padding: 16px 28px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(22, 108, 231, 0.3) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.software-dev-redesign-page .btn-primary-revamp:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(22, 108, 231, 0.5) !important;
+  background: linear-gradient(135deg, #1d77f3 0%, #0259be 100%) !important;
+}
+
+.software-dev-redesign-page .btn-secondary-revamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02) !important;
+  color: #cbd5e1 !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  padding: 16px 28px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.software-dev-redesign-page .btn-secondary-revamp:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Lottie/SVG Animation Container */
+.software-dev-redesign-page .hero-anim-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.software-dev-redesign-page .hero-anim-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  animation: pulse-glow 6s infinite alternate;
+}
+
+/* Animated SVG Elements */
+.software-dev-redesign-page .ufaqtech-hero-svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-width: 540px;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5));
+}
+
+.software-dev-redesign-page .svg-floating-icon {
+  animation: bounce-slow 4s ease-in-out infinite alternate;
+}
+
+.software-dev-redesign-page .svg-floating-icon-delayed {
+  animation: bounce-slow 4s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+.software-dev-redesign-page .tech-badge {
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.software-dev-redesign-page .tech-badge:hover {
+  transform: scale(1.1) translateY(-5px) !important;
+}
+
+/* Content Intro Paragraphs */
+.software-dev-redesign-page .technology--info {
+  background-color: #ffffff !important;
+  color: #334155;
+  position: relative;
+  z-index: 1;
+}
+
+.software-dev-redesign-page .intro-section {
+  padding: 60px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.software-dev-redesign-page .text-content-block p {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.software-dev-redesign-page .text-content-block p:last-child {
+  margin-bottom: 0;
+}
+
+.software-dev-redesign-page .text-content-block a.ufaqtech__link--style {
+  color: #2563eb !important;
+}
+
+/* 4-Card USP Section */
+.software-dev-redesign-page .usp-section {
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.software-dev-redesign-page .section-title-wrapper {
+  margin-bottom: 60px;
+}
+
+.software-dev-redesign-page .section-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.software-dev-redesign-page h2.section-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.software-dev-redesign-page .usp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.software-dev-redesign-page .usp-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.software-dev-redesign-page .usp-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.08), 0 10px 10px -5px rgba(37, 99, 235, 0.03);
+}
+
+.software-dev-redesign-page .usp-card:hover::after {
+  transform: scaleX(1);
+}
+
+.software-dev-redesign-page .usp-card-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #2563eb;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.software-dev-redesign-page .usp-card:hover .usp-card-icon-container {
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.software-dev-redesign-page .usp-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.software-dev-redesign-page .usp-card p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 0;
+}
+
+/* Star Picks Section (Process Steps / Features) */
+.software-dev-redesign-page .star-picks-section {
+  padding: 60px 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.software-dev-redesign-page .picks-alternating-grid {
+  margin-top: 50px;
+}
+
+.software-dev-redesign-page .picks-card-flat {
+  padding: 20px 0;
+}
+
+.software-dev-redesign-page .picks-icon-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: #2563eb;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.software-dev-redesign-page .picks-card-flat h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.software-dev-redesign-page .picks-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.software-dev-redesign-page .picks-img-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.6s ease;
+}
+
+.software-dev-redesign-page .picks-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.software-dev-redesign-page .picks-grid {
+  margin-top: 30px;
+}
+
+.software-dev-redesign-page .picks-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.software-dev-redesign-page .picks-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.08), 0 10px 10px -5px rgba(37, 99, 235, 0.03);
+}
+
+.software-dev-redesign-page .picks-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+}
+
+.software-dev-redesign-page .picks-card:hover .picks-icon {
+  background: #2563eb;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+.software-dev-redesign-page .picks-card h4 {
+  color: #0f172a !important;
+}
+
+.software-dev-redesign-page .picks-text {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Tech Stack Container */
+.software-dev-redesign-page .tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.software-dev-redesign-page .tech-stack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: all 0.3s ease;
+}
+
+.software-dev-redesign-page .tech-stack-pill i {
+  font-size: 1rem;
+}
+
+.software-dev-redesign-page .tech-stack-pill:hover {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+  color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
+}
+
+/* Keyframes animations */
+@keyframes bounce-slow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .software-dev-redesign-page h1.hero-main-title {
+    font-size: 2.75rem;
+  }
+
+  .software-dev-redesign-page .hero-revamp {
+    padding: 110px 0 60px;
+    text-align: center;
+  }
+
+  .software-dev-redesign-page .hero-ctas {
+    justify-content: center;
+  }
+
+  .software-dev-redesign-page .hero-anim-wrapper {
+    margin-top: 50px;
+  }
+
+  .software-dev-redesign-page h2.section-main-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .software-dev-redesign-page h1.hero-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .software-dev-redesign-page .picks-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* ----------------------------------------------------
+   REDESIGN EXTENSIONS: BORDERLESS LAYOUTS & STEPPER
+   ---------------------------------------------------- */
+
+.software-dev-redesign-page .dark-section {
+  background-color: #020617 !important;
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  margin: 0 !important; /* OVERRIDE global 7% top margin */
+}
+
+.software-dev-redesign-page .dark-section .star-picks-section {
+  padding-top: 0 !important;
+  padding-bottom: 40px !important;
+}
+
+.software-dev-redesign-page .dark-section h2.section-main-title {
+  color: #ffffff !important;
+}
+
+.software-dev-redesign-page .dark-section p.picks-text {
+  color: #94a3b8 !important;
+}
+
+.software-dev-redesign-page .dark-section .process-row-content h3 {
+  color: #ffffff !important;
+}
+
+.software-dev-redesign-page .dark-section .process-row-content p {
+  color: #94a3b8 !important;
+}
+
+/* Borderless USP Item styles */
+.software-dev-redesign-page .usp-item {
+  padding: 15px 10px;
+  background: transparent;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.software-dev-redesign-page .usp-item:hover {
+  transform: translateY(-4px);
+}
+
+.software-dev-redesign-page .usp-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(37, 99, 235, 0.1));
+}
+
+.software-dev-redesign-page .usp-item:hover .usp-icon-wrapper {
+  background: #2563eb;
+  color: #ffffff;
+  transform: scale(1.08) rotate(5deg);
+  filter: drop-shadow(0 8px 20px rgba(37, 99, 235, 0.35));
+}
+
+.software-dev-redesign-page .usp-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a; /* Dark Slate */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.software-dev-redesign-page .usp-item:hover .usp-title {
+  color: #2563eb; /* Blue highlight */
+}
+
+.software-dev-redesign-page .usp-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #475569; /* Medium grey */
+  margin-bottom: 0;
+}
+
+/* Borderless Capabilities Flat list item styles */
+.software-dev-redesign-page .picks-item-flat {
+  padding: 15px 12px;
+  background: transparent;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.software-dev-redesign-page .picks-item-flat:hover {
+  transform: translateX(4px);
+}
+
+.software-dev-redesign-page .picks-icon-flat {
+  font-size: 1.35rem;
+  color: #38bdf8;
+  margin-top: 2px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 5px rgba(56, 189, 248, 0.15));
+}
+
+.software-dev-redesign-page .picks-item-flat:hover .picks-icon-flat {
+  color: #38bdf8;
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(56, 189, 248, 0.3));
+}
+
+/* Vertical Process Stepper Timeline */
+.software-dev-redesign-page .process-timeline-row {
+  position: relative;
+}
+
+.software-dev-redesign-page .process-preview-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+  margin-bottom: 50px;
+  z-index: 10;
+  will-change: transform;
+}
+
+.software-dev-redesign-page .device-frame {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.software-dev-redesign-page .device-header {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 12px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.software-dev-redesign-page .device-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.software-dev-redesign-page .device-header .dot.red { background: #ef4444; }
+.software-dev-redesign-page .device-header .dot.yellow { background: #eab308; }
+.software-dev-redesign-page .device-header .dot.green { background: #22c55e; }
+
+.software-dev-redesign-page .device-header .url-bar {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  padding: 3px 0;
+  margin-left: 20px;
+  font-family: monospace;
+}
+
+.software-dev-redesign-page .device-content {
+  flex-grow: 1;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stepper state panels */
+.software-dev-redesign-page .process-state-panel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  transform: scale(0.95) translateY(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-dev-redesign-page .process-state-panel.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* State 1: Requirement Analysis Graphic */
+.software-dev-redesign-page .visual-planning-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.software-dev-redesign-page .planning-node {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.1);
+  border: 2px solid #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+}
+
+.software-dev-redesign-page .planning-node.node-main {
+  width: 68px;
+  height: 68px;
+  font-size: 1.6rem;
+}
+
+.software-dev-redesign-page .planning-line {
+  width: 2px;
+  height: 35px;
+  background: linear-gradient(to bottom, #38bdf8, rgba(56, 189, 248, 0.1));
+}
+
+.software-dev-redesign-page .planning-node-group {
+  display: flex;
+  gap: 30px;
+}
+
+/* State 2: System Design Graphic */
+.software-dev-redesign-page .visual-architecture-grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.software-dev-redesign-page .wireframe-header {
+  height: 25px;
+  border-bottom: 1px dashed rgba(56, 189, 248, 0.3);
+  margin-bottom: 10px;
+}
+
+.software-dev-redesign-page .wireframe-body {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.software-dev-redesign-page .wireframe-sidebar {
+  width: 60px;
+  border-right: 1px dashed rgba(56, 189, 248, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 6px;
+}
+
+.software-dev-redesign-page .sidebar-mock-item {
+  height: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 3px;
+  display: block;
+}
+
+.software-dev-redesign-page .wireframe-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-dev-redesign-page .db-schema-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.software-dev-redesign-page .db-table-mock {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.software-dev-redesign-page .db-title {
+  color: #38bdf8;
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 4px;
+}
+
+.software-dev-redesign-page .db-field {
+  color: #94a3b8;
+  display: block;
+}
+
+/* State 3: Custom Coding Graphic */
+.software-dev-redesign-page .visual-creation-editor {
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.software-dev-redesign-page .code-line {
+  color: #cbd5e1;
+}
+
+.software-dev-redesign-page .code-line .keyword { color: #f43f5e; }
+.software-dev-redesign-page .code-line .string { color: #22c55e; }
+
+.software-dev-redesign-page .code-line.indent-1 { padding-left: 20px; }
+.software-dev-redesign-page .code-line.indent-2 { padding-left: 40px; }
+
+.software-dev-redesign-page .mock-browser-rendered {
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  text-align: center;
+}
+
+/* State 4: Testing Graphic */
+.software-dev-redesign-page .visual-testing-scanner {
+  width: 100%;
+  position: relative;
+}
+
+.software-dev-redesign-page .scan-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #22c55e, transparent);
+  box-shadow: 0 0 8px #22c55e;
+  animation: scan-loop 2s infinite ease-in-out;
+}
+
+@keyframes scan-loop {
+  0% { top: 0%; }
+  50% { top: 100%; }
+  100% { top: 0%; }
+}
+
+.software-dev-redesign-page .testing-log {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.software-dev-redesign-page .log-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+}
+
+.software-dev-redesign-page .log-item.pass {
+  color: #22c55e;
+}
+
+/* State 5: Deployment Rocket Graphic */
+.software-dev-redesign-page .visual-launching-rocket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.software-dev-redesign-page .rocket-container {
+  font-size: 3rem;
+  animation: float-rocket 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes float-rocket {
+  0% { transform: translateY(0px) rotate(-5deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.software-dev-redesign-page .clouds {
+  display: flex;
+  gap: 10px;
+}
+
+.software-dev-redesign-page .clouds span {
+  width: 25px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  animation: blow-clouds 1s infinite alternate ease-in-out;
+}
+
+@keyframes blow-clouds {
+  0% { opacity: 0.3; transform: scaleX(0.8); }
+  100% { opacity: 0.7; transform: scaleX(1.2); }
+}
+
+/* State 6: Maintenance Uptime Graphic */
+.software-dev-redesign-page .visual-maintenance-uptime {
+  width: 100%;
+}
+
+.software-dev-redesign-page .uptime-dial {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 5px solid rgba(34, 197, 94, 0.1);
+  border-top-color: #22c55e;
+  border-right-color: #22c55e;
+  margin: 0 auto 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: spin-dial 2.5s infinite linear;
+}
+
+.software-dev-redesign-page .uptime-dial .value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #22c55e;
+  font-family: monospace;
+}
+
+.software-dev-redesign-page .uptime-dial .label {
+  font-size: 0.65rem;
+  color: #64748b;
+  font-weight: bold;
+}
+
+.software-dev-redesign-page .uptime-bar {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.software-dev-redesign-page .bar-pill {
+  width: 8px;
+  height: 15px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+
+.software-dev-redesign-page .bar-pill.active {
+  background: #22c55e;
+}
+
+/* Right Stepper Timeline axis styling */
+.software-dev-redesign-page .process-timeline-stepper {
+  position: relative;
+  padding-left: 45px;
+}
+
+.software-dev-redesign-page .process-timeline-line {
+  position: absolute;
+  left: 17px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.software-dev-redesign-page .process-timeline-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, #38bdf8 0%, #2563eb 100%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.software-dev-redesign-page .process-timeline-step {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.software-dev-redesign-page .process-timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+.software-dev-redesign-page .timeline-step-marker {
+  position: absolute;
+  left: -45px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.software-dev-redesign-page .marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid #030914;
+  transition: all 0.3s ease;
+}
+
+.software-dev-redesign-page .process-timeline-step.active .marker-dot {
+  background: #38bdf8;
+  transform: scale(1.3);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.software-dev-redesign-page .process-row-content {
+  transition: all 0.3s ease;
+  opacity: 0.45;
+  transform: translateX(-5px);
+}
+
+.software-dev-redesign-page .process-timeline-step.active .process-row-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.software-dev-redesign-page .process-step-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.software-dev-redesign-page .process-timeline-step.active .process-step-badge {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: transparent;
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.2);
+}
+
+.software-dev-redesign-page .process-row-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.software-dev-redesign-page .process-row-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+
+/* Ensure minimum font size of 18px for body paragraphs, list items and description lines on redesigned pages */
+.software-dev-redesign-page p,
+.software-dev-redesign-page li,
+.software-dev-redesign-page .usp-desc,
+.software-dev-redesign-page .picks-text,
+.software-dev-redesign-page .process-row-content p,
+.software-dev-redesign-page .picks-text-flat,
+.software-dev-redesign-page .audience-step-desc,
+.software-dev-redesign-page .feature-minimal-item p,
+.software-dev-redesign-page .picks-summary-text {
+  font-size: 18px !important;
+}

@@ -1,0 +1,336 @@
+/* .......................product details.........................................*/
+
+.product_description--cta {
+    margin-top: 7% !important;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+/*.product_description--cta .col-sm-5 {*/
+/*margin-top: 7%;*/
+/*}*/
+
+.product_description--cta .col-sm-5 input{
+    background-color:#0150a9;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 2.5% 9%;
+}
+.sitemap-adn-title {
+	color: #fff !important;
+    font-weight: 600;
+}
+.sitemap-card-header{
+    background-color: #166ce7;
+}
+.mt-50{
+    margin-top: 3rem;
+}
+.m-100{
+    margin-top: 70px;
+}
+.row.position-absolute-row{
+    position: absolute;
+    top: 0;
+}
+.lead_first_section .container{
+    position: relative;
+}
+.video__content-parent{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+ .video__content {
+ 	position: relative;
+ }
+  .play-btn-div {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	cursor: pointer;
+    width: 58px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: red;
+    opacity: 1;
+    border-radius: 10px;
+  }
+  .red-video-play {
+      width: 58px;
+      height: 35px;
+      border: none;
+      background-color: red;
+      opacity: 1;
+      border-radius: 10px;
+  }
+
+  .ytbe_play-btn {
+      font-size: 26px;
+      color: #ffffff;
+      opacity: 1;
+      cursor: pointer;
+      margin-top: -2px;
+  }
+  .lead_system_head,
+  .manage_lead_effectively {
+    font-family: 'Open Sans',
+      sans-serif;
+  }
+
+.technology--info  .product-description--div {
+    /*-webkit-box-shadow: 0px 9.5px 25px 5.5px rgb(236, 236, 235);
+    box-shadow: 0px 9.5px 25px 5.5px rgb(236, 236, 235);*/
+    box-shadow: -1px 5px 20px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7%;
+    border-radius: 3px;
+}
+.parent-login-img img {
+    width: 100%;
+    height: 40vw;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+/*
+.technology--info .product-description--div .row.technology_contents-ui {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+*/
+
+
+.technology--info .product-description--div .col-sm-6.technology_details p{
+    color: rgb(97,103,123);
+}
+
+.tecnology_contents-ui .technology_details input{
+    background-color: rgb(34,46,152);
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 2.5% 9%;
+}
+.technology--info .last-container {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.technology-list.product-description--div {
+    color: rgb(97,103,123);
+    /*padding-top: 37.5px;
+    padding-bottom: 21.5px;
+    padding-left: 125.5px;
+    padding-right:125px ;*/
+    line-height: 2.5;
+    border-radius: 3px;
+
+}
+.product_list ul.square {
+    list-style-type: none !important;
+}
+.technology_contents-ui  .product_list ul.square {
+    padding-left: 0px;
+}
+.admin_login ul.list_color {
+    color: rgb(97,103,123);
+}
+
+.project-mean{
+    color: rgb(97,103,123);
+
+}
+.product-description--div .row .col-sm-6 .prod_des_image4{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-filter: drop-shadow(8px 8px 10px gray);
+    filter: drop-shadow(8px 8px 10px gray);
+}
+.main-image img, .img-div img{
+    -webkit-filter: drop-shadow(8px 8px 10px gray);
+    filter: drop-shadow(8px 8px 10px gray);
+}
+.product-demo {
+    text-align: right;
+}
+.product-demo a.btn-primary{
+    background-color: #0150a9;
+    font-size: 126%;
+    /*box-shadow:10px 10px 10px rgba(2, 99, 213, 0.5);*/
+    /*box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.20);*/
+    border-radius: 3px;
+    -webkit-transition: -webkit-transform 0s;
+    transition: -webkit-transform 0s;
+    -o-transition: transform 0s;
+    transition: transform 0s;
+    transition: transform 0s, -webkit-transform 0s;
+}
+.product-demo a.btn-primary:focus,
+.product-enquiry a.btn-primary:focus {
+    -webkit-box-shadow : none !important;
+    box-shadow : none !important;
+}
+.product-enquiry a.btn-primary{
+    background-color: #0150a9;
+    /*width: 35%;*/
+    font-size: 126%;
+    /*box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.20);*/
+    /*box-shadow:10px 10px 10px rgba(5, 5, 154, 0.1);*/
+    border-radius: 3px;
+    -webkit-transition: -webkit-transform 0s;
+    transition: -webkit-transform 0s;
+    -o-transition: transform 0s;
+    transition: transform 0s;
+    transition: transform 0s, -webkit-transform 0s;
+    padding-left: 12% !important;
+    padding-right: 12% !important;
+}
+.product-demo a.btn-primary:hover, .product-enquiry a.btn-primary:hover {
+    background-color:#0064d7;
+    color: #ffffff;
+    border-color: #0064d7;
+    -webkit-box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+.product-demo a.btn-primary:active, .product-enquiry a.btn-primary:active {
+    -ms-transform: scale(0.9); /* IE 9 */
+    -webkit-transform: scale(0.9); /* Safari 3-8 */
+    transform: scale(0.9);
+}
+.contents-ui .card{
+    width: 90%;
+}
+.card-margin{
+    padding-bottom: 80px;
+    top: 5%;
+}
+.card-prod-shadow{
+    box-shadow: -1px 5px 20px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border: 0 !important;
+}
+
+
+
+
+
+
+/*===========PRODUCT page=============*/
+
+
+.product-main .details .prod-downld {
+    display: inline-block;
+    font-size: 13.33px;
+    color: rgb(36,116,184);
+    /*width: 163px;
+    height: 18px;*/
+    font-weight: bold;
+    /*font-family: 'Nunito Sans', sans-serif;*/
+    text-decoration:  none;
+}
+.product-main .details .prod-more,
+.client-main .details .prod-more{
+    display: inline-block;
+    font-size: 13.33px;
+    color: rgb(36,116,184);
+    border-bottom: 1px solid rgb(36,116,184);
+    margin-bottom: 31px;
+    font-weight: bold;
+    /*font-family: ApercuPro;*/
+    text-decoration:  none;
+}
+
+/*========================social button css============*/
+.social-btn-color {
+    /*  background-color: #0150a9;*/
+    -webkit-box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    -webkit-transition: -webkit-transform 0s;
+    transition: -webkit-transform 0s;
+    -o-transition: transform 0s;
+    transition: transform 0s;
+    transition: transform 0s, -webkit-transform 0s;
+    color: #ffffff;
+    border: 0 !important;
+    border-radius: 3px !important;
+}
+.social-btn-color:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/*.social-btn-color:hover{
+    background-color: grey;
+}*/
+.social-btn-color:active, .social-btn-color:active {
+    /*  background-color: #0150a9 !important;*/
+    color: #ffffff !important;
+    -ms-transform: scale(0.9); 
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+    -webkit-box-shadow :  none;
+    box-shadow :  none;
+}
+
+/*========================features icons============*/
+
+.features_icon img{
+    height: 10%;
+    width: 10%;
+}
+.website-dev-list.technology-list{
+    color: rgb(97,103,123) !important;
+    line-height: 2.5 !important;
+
+}
+.product_description--cta .gplay.text-right{
+    text-align: center !important;
+}
+/* =================alumni page css=============*/
+.product-description--div .row .col-sm-6 .prod_des_image5 {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@media only screen and (max-device-width: 991px) {
+    .youtube_bg{
+        height: 220px;
+        
+    }
+     .video__content-parent{
+         top: 110%;
+         right: 0;
+     }
+     .m-100 {
+     	margin-top: 20px;
+     }
+}
+@media only screen and (max-device-width: 767px) {
+    .lead_first_section{
+        height: 470px !important;
+    }
+    .video__content-parent{
+        top: 110%;
+        right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .youtube_bg{
+        height: 200px;
+    }
+    .manage_lead_effectively{
+        padding-left: 0 !important;
+    }
+    .m-100{
+        margin-top: 30px;
+    }
+}

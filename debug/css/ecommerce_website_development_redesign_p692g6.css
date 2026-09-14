@@ -1,0 +1,504 @@
+/* Scoped stylesheet for Travel Web Portal redesign */
+
+.ecommerce-portal-redesign-page {
+  background-color: #030914;
+  color: #f8fafc;
+  font-family: 'Inter', 'Nunito Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Base Styles & Utility classes */
+.ecommerce-portal-redesign-page h1,
+.ecommerce-portal-redesign-page h2,
+.ecommerce-portal-redesign-page h3,
+.ecommerce-portal-redesign-page h4,
+.ecommerce-portal-redesign-page h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ecommerce-portal-redesign-page .text-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ecommerce-portal-redesign-page .glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecommerce-portal-redesign-page .glass-panel:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+/* Background decoration */
+.ecommerce-portal-redesign-page .bg-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(3, 9, 20, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ecommerce-portal-redesign-page .bg-glow-1 {
+  top: 10%;
+  left: -100px;
+  animation: pulse-glow 8s infinite alternate ease-in-out;
+}
+
+.ecommerce-portal-redesign-page .bg-glow-2 {
+  top: 30%;
+  right: -150px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(3, 9, 20, 0) 70%);
+  animation: pulse-glow 10s infinite alternate-reverse ease-in-out;
+}
+
+.ecommerce-portal-redesign-page .bg-glow-3 {
+  top: 60%;
+  left: 30%;
+  animation: pulse-glow 12s infinite alternate ease-in-out;
+}
+
+/* Scroll Progress indicator */
+.ecommerce-portal-redesign-page .scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ecommerce-portal-redesign-page .scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+  transition: width 0.1s ease-out;
+}
+
+/* Hero Section Styles */
+.ecommerce-portal-redesign-page .hero-revamp {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 100px;
+  background: radial-gradient(ellipse at center, #0a1128 0%, #030914 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ecommerce-portal-redesign-page #hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  z-index: 0;
+}
+
+.ecommerce-portal-redesign-page .hero-title-container {
+  position: relative;
+  z-index: 2;
+}
+
+.ecommerce-portal-redesign-page h1.hero-main-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ecommerce-portal-redesign-page .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #94a3b8;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+
+.ecommerce-portal-redesign-page .hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Standard Buttons overrides - Rectangular design */
+.ecommerce-portal-redesign-page .btn-primary-revamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #166ce7 0%, #0150a9 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  padding: 16px 28px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(22, 108, 231, 0.3) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.ecommerce-portal-redesign-page .btn-primary-revamp:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(22, 108, 231, 0.5) !important;
+  background: linear-gradient(135deg, #1d77f3 0%, #0259be 100%) !important;
+}
+
+.ecommerce-portal-redesign-page .btn-secondary-revamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02) !important;
+  color: #cbd5e1 !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  padding: 16px 28px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.ecommerce-portal-redesign-page .btn-secondary-revamp:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Hero Anim Graphic SVG mockup */
+.ecommerce-portal-redesign-page .hero-anim-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.ecommerce-portal-redesign-page .ufaqtech-hero-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+.ecommerce-portal-redesign-page .svg-floating-icon {
+  animation: bounce-slow 4s infinite alternate ease-in-out;
+}
+
+.ecommerce-portal-redesign-page .svg-floating-icon-delayed {
+  animation: bounce-slow 4.5s infinite alternate-reverse ease-in-out;
+}
+
+.ecommerce-portal-redesign-page .dashboard-screen {
+  transition: transform 0.5s ease;
+}
+
+.ecommerce-portal-redesign-page .ufaqtech-hero-svg:hover .dashboard-screen {
+  transform: scale(1.01) translateY(-2px);
+}
+
+/* White background body wrapper override */
+.ecommerce-portal-redesign-page .technology--info {
+  background-color: #ffffff !important;
+  color: #334155;
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.ecommerce-portal-redesign-page .intro-section {
+  padding: 40px 0 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-portal-redesign-page .text-content-block p {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.ecommerce-portal-redesign-page .text-content-block p:last-child {
+  margin-bottom: 0;
+}
+
+.ecommerce-portal-redesign-page .text-content-block a.ufaqtech__link--style {
+  color: #2563eb !important;
+}
+
+/* 4-Card USP Section */
+.ecommerce-portal-redesign-page .usp-section {
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-portal-redesign-page .section-title-wrapper {
+  margin-bottom: 60px;
+}
+
+.ecommerce-portal-redesign-page .section-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.ecommerce-portal-redesign-page h2.section-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.ecommerce-portal-redesign-page .usp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecommerce-portal-redesign-page .usp-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.ecommerce-portal-redesign-page .usp-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.08), 0 10px 10px -5px rgba(37, 99, 235, 0.03);
+}
+
+.ecommerce-portal-redesign-page .usp-card:hover::after {
+  transform: scaleX(1);
+}
+
+.ecommerce-portal-redesign-page .usp-card-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #2563eb;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ecommerce-portal-redesign-page .usp-card:hover .usp-card-icon-container {
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.ecommerce-portal-redesign-page .usp-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.ecommerce-portal-redesign-page .usp-card p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 0;
+}
+
+/* Star Picks Section (Process Steps / Features) */
+.ecommerce-portal-redesign-page .star-picks-section {
+  padding: 60px 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-portal-redesign-page .picks-alternating-grid {
+  margin-top: 50px;
+}
+
+.ecommerce-portal-redesign-page .picks-card-flat {
+  padding: 20px 0;
+}
+
+.ecommerce-portal-redesign-page .picks-icon-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: #2563eb;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.ecommerce-portal-redesign-page .picks-card-flat h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.ecommerce-portal-redesign-page .picks-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.ecommerce-portal-redesign-page .picks-img-wrapper img,
+.ecommerce-portal-redesign-page .picks-img-wrapper svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.6s ease;
+}
+
+.ecommerce-portal-redesign-page .picks-img-wrapper:hover img,
+.ecommerce-portal-redesign-page .picks-img-wrapper:hover svg {
+  transform: scale(1.03);
+}
+
+.ecommerce-portal-redesign-page .picks-text {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* Tech Stack Container */
+.ecommerce-portal-redesign-page .tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ecommerce-portal-redesign-page .tech-stack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: all 0.3s ease;
+}
+
+.ecommerce-portal-redesign-page .tech-stack-pill i {
+  font-size: 1rem;
+}
+
+.ecommerce-portal-redesign-page .tech-stack-pill:hover {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+  color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
+}
+
+/* Keyframes animations */
+@keyframes bounce-slow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .ecommerce-portal-redesign-page h1.hero-main-title {
+    font-size: 2.50rem;
+  }
+
+  .ecommerce-portal-redesign-page .hero-revamp {
+    padding: 110px 0 60px;
+    text-align: center;
+  }
+
+  .ecommerce-portal-redesign-page .hero-ctas {
+    justify-content: center;
+  }
+
+  .ecommerce-portal-redesign-page .hero-anim-wrapper {
+    margin-top: 50px;
+  }
+
+  .ecommerce-portal-redesign-page h2.section-main-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ecommerce-portal-redesign-page h1.hero-main-title {
+    font-size: 2.0rem;
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Axes -->
+  <line x1="8" y1="56" x2="58" y2="56" stroke="#374151" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="8" x2="8" y2="56" stroke="#374151" stroke-width="2" stroke-linecap="round"/>
+  <!-- Axis arrows -->
+  <polyline points="55,53 58,56 55,59" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="5,11 8,8 11,11" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Class A: purple dots -->
+  <circle cx="14" cy="44" r="3.5" fill="#7C3AED"/>
+  <circle cx="20" cy="38" r="3.5" fill="#7C3AED"/>
+  <circle cx="16" cy="30" r="3.5" fill="#7C3AED"/>
+  <circle cx="24" cy="34" r="3.5" fill="#7C3AED"/>
+  <!-- Class B: cyan dots -->
+  <circle cx="36" cy="22" r="3.5" fill="#2DD4BF"/>
+  <circle cx="44" cy="14" r="3.5" fill="#2DD4BF"/>
+  <circle cx="40" cy="28" r="3.5" fill="#2DD4BF"/>
+  <circle cx="50" cy="20" r="3.5" fill="#2DD4BF"/>
+  <!-- Decision boundary (dashed diagonal) -->
+  <line x1="8" y1="52" x2="56" y2="12" stroke="#6366F1" stroke-width="2" stroke-dasharray="4,3" opacity="0.8"/>
+</svg>

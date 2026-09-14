@@ -1,0 +1,1551 @@
+/* UfaqTech Revamped Submenu/Mega-Menu Stylesheet */
+
+/* Global toggles for full/short product names across all device viewports */
+
+
+/* Desktop Styles */
+@media (min-width: 1111px) {
+
+    /* Main Dropdown Container */
+    .second-navbar .dropdown-menu.new-tech,
+    .second-navbar .dropdown-menu.new-service {
+        display: none;
+        position: absolute;
+        width: 74vw !important;
+        left: 50% !important;
+        top: 100% !important;
+        transform: translateX(-50%) translateY(12px) !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+        padding: 12px 20px !important;
+        margin-top: 0 !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 9999 !important;
+        line-height: 1.5 !important;
+    }
+
+    /*
+     * Keep the hover chain alive while the cursor travels from the nav item
+     * into the dropdown panel. The invisible bridge avoids a dead zone without
+     * changing the visible alignment of the menu bar.
+     */
+    .second-navbar .clickable-href {
+        position: static !important;
+    }
+
+    .second-navbar .clickable-href>a.nav-link {
+        position: relative !important;
+    }
+
+    .second-navbar .clickable-href>a.nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 10px;
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    .second-navbar .tech-li,
+    .second-navbar .service-li {
+        position: static !important;
+    }
+
+    .second-navbar .tech-li>a.nav-link,
+    .second-navbar .service-li>a.nav-link {
+        position: relative !important;
+    }
+
+    .second-navbar .tech-li>a.nav-link::after,
+    .second-navbar .service-li>a.nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 10px;
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    /* Override dynamic Product List Menu width restriction if present */
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        width: 74vw !important;
+        left: 50% !important;
+    }
+
+    /* Show on Hover */
+    .second-navbar .dropdown:hover>.dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    /* Submenu Row & Column Spacing */
+    .sub-menu-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .sub-menu-left {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-right: 1px solid #f1f5f9;
+    }
+
+    .sub-menu-right {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Grid layout for Product cards inside left side */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    /* Product Cards */
+    .product-card-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        background: #f8fafc;
+        border: 1px solid #f1f5f9;
+        border-radius: 12px;
+        text-decoration: none !important;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        /* Reset styles inherited from .ul-menu .main-nav-item a */
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        text-transform: none !important;
+        white-space: normal !important;
+    }
+
+    .product-card-item:hover {
+        background: #ffffff;
+        border-color: #0150a9;
+        box-shadow: 0 10px 20px rgba(1, 80, 169, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .product-card-img {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 6px;
+        border: 1px solid #e2e8f0;
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+    }
+
+    .product-card-item:hover .product-card-img {
+        transform: scale(1.05);
+    }
+
+    .product-card-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .product-card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .product-card-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #1e293b;
+        line-height: 1.3;
+        white-space: normal;
+        transition: color 0.2s ease;
+    }
+
+
+    .product-card-item:hover .product-card-name {
+        color: #0150a9;
+    }
+
+    /* View All Product Card */
+    .product-card-item.view-all-card {
+        border-style: dashed;
+        border-color: #cbd5e1;
+        background: transparent;
+        justify-content: center;
+    }
+
+    .product-card-item.view-all-card:hover {
+        border-color: #0150a9;
+        background: #f0f7ff;
+    }
+
+    .product-card-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        max-height: 44px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f1f5f9;
+        border-radius: 8px;
+        color: #64748b;
+        font-size: 16px;
+        transition: all 0.2s ease;
+    }
+
+    .product-card-item.view-all-card:hover .product-card-icon {
+        background: #0150a9;
+        color: #ffffff;
+        transform: translateX(3px);
+    }
+
+    /* Featured right panel */
+    .menu-featured-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 24px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .menu-featured-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .featured-badge {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8.5px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        background: #d97706;
+        color: #ffffff;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        width: fit-content;
+        margin-bottom: 8px;
+    }
+
+    .featured-badge.purple-badge {
+        background: #6366f1;
+    }
+
+    .featured-badge.blue-badge {
+        background: #2563eb;
+    }
+
+    .featured-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #ffffff;
+    }
+
+    .featured-desc {
+        font-size: 11px;
+        line-height: 1.4;
+        color: #94a3b8;
+        margin-bottom: 12px;
+    }
+
+    .featured-link {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+        color: #38bdf8;
+        text-decoration: none !important;
+        margin-top: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.2s ease;
+    }
+
+    .featured-link:hover {
+        color: #7dd3fc;
+    }
+
+    .featured-link i {
+        font-size: 10px;
+        transition: transform 0.2s ease;
+    }
+
+    .featured-link:hover i {
+        transform: translateX(4px);
+    }
+
+    .featured-links-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .featured-link-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+        color: #475569 !important;
+        text-decoration: none !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+        padding: 6px 0;
+        border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .featured-link-item:last-child {
+        border-bottom: none;
+    }
+
+    .featured-link-item:hover {
+        color: #0150a9 !important;
+        transform: translateX(4px);
+    }
+
+    .featured-link-item i {
+        color: #0150a9;
+        font-size: 12px;
+    }
+
+    .second-navbar .dropdown-menu .menu-featured-card .featured-link-item {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11px !important;
+        font-weight: 500 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+        text-decoration: none !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        transition: all 0.2s ease !important;
+        padding: 6px 0 !important;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .second-navbar .dropdown-menu .menu-featured-card .featured-link-item:last-child {
+        border-bottom: none !important;
+    }
+
+    .second-navbar .dropdown-menu .menu-featured-card .featured-link-item:hover {
+        color: #ffffff !important;
+        transform: translateX(4px) !important;
+        background-color: transparent !important;
+    }
+
+    .second-navbar .dropdown-menu .menu-featured-card .featured-link-item i {
+        color: #38bdf8 !important;
+        font-size: 12px !important;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-column {
+        margin-bottom: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+    .mega-menu-section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px !important;
+        font-weight: 700;
+        color: #0f172a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #0150a9;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        margin-bottom: 20px !important;
+    }
+
+    .mega-menu-section-title i {
+        color: #0150a9;
+        font-size: 13px;
+    }
+
+    .mega-menu-section-title.mt-4 {
+        margin-top: 8px !important;
+    }
+
+    /* Submenu Vertical Link List */
+    .mega-menu-list {
+        list-style: none !important;
+        padding-left: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mega-menu-list .nav-item {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-list .nav-link {
+        font-size: 12.5px !important;
+        color: #475569 !important;
+        padding: 2px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        transition: color 0.2s ease !important;
+        background: transparent !important;
+        border: none !important;
+        text-transform: none !important;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-list .nav-link:hover {
+        color: #0150a9 !important;
+    }
+
+    /* Badges for Submenu Items */
+    .menu-badge {
+        font-size: 8px;
+        font-weight: 700;
+        padding: 1px 4px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        margin-left: 6px;
+        display: inline-block;
+        line-height: 1.1;
+    }
+
+    .menu-badge.badge-new {
+        background-color: #ef4444;
+        color: #ffffff;
+    }
+
+    .menu-badge.badge-ai {
+        background-color: #8b5cf6;
+        color: #ffffff;
+    }
+
+    .menu-badge.badge-hot {
+        background-color: #f97316;
+        color: #ffffff;
+    }
+}
+
+/* Enable text wrapping inside mega-menu column links only for devices under 1752px */
+@media (min-width: 1111px) and (max-width: 1751px) {
+    .second-navbar .dropdown-menu .mega-menu-list .nav-link {
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+}
+
+/* Mobile Styles (Collapse/Accordion behaviour) */
+@media (max-width: 1110px) {
+
+    /* Reset layout columns */
+    .sub-menu-row {
+        display: block !important;
+    }
+
+    .sub-menu-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-right: none !important;
+        padding: 0 !important;
+    }
+
+    .sub-menu-right {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .menu-featured-card {
+        display: block !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    .menu-featured-card .featured-badge,
+    .menu-featured-card .featured-title,
+    .menu-featured-card .featured-desc,
+    .menu-featured-card>.featured-link {
+        display: none !important;
+    }
+
+    .featured-links-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        margin-top: 15px !important;
+    }
+
+    .featured-link-item {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 12px !important;
+        color: #475569 !important;
+        padding: 8px 10px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+        background: transparent !important;
+    }
+
+    .featured-link-item:last-child {
+        border-bottom: none !important;
+    }
+
+    .featured-link-item:hover {
+        color: #0150a9 !important;
+        background-color: #f8fafc !important;
+        transform: translateX(4px) !important;
+    }
+
+    .featured-link-item i {
+        color: #0150a9 !important;
+        font-size: 12px !important;
+    }
+
+
+    /* Adjust dynamic Products list */
+    .second-navbar .dropdown-menu.new-tech.product__list,
+    .second-navbar .dropdown-menu.new-tech,
+    .second-navbar .dropdown-menu.new-service {
+        position: static !important;
+        float: none !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: auto !important;
+        transform: none !important;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+        border: 1px solid #e2e8f0 !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        border-radius: 14px !important;
+        padding: 12px 12px 10px !important;
+        margin-top: 10px !important;
+        overflow: visible !important;
+    }
+
+    .second-navbar .navbar-nav .dropdown>.dropdown-menu {
+        display: none !important;
+    }
+
+    .second-navbar .navbar-nav .dropdown.mobile-open>.dropdown-menu {
+        display: block !important;
+    }
+
+    .second-navbar .navbar-nav .dropdown.mobile-open>.nav-link {
+        color: #529ff1 !important;
+    }
+
+    /* Product Grid lists in accordion style on mobile */
+    .product-grid {
+        display: block !important;
+    }
+
+    .product-card-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 10px 12px !important;
+        border-radius: 12px !important;
+        margin-bottom: 8px !important;
+        text-decoration: none !important;
+        
+        /* Reset inherited styling */
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        text-transform: none !important;
+        white-space: normal !important;
+    }
+
+    .product-card-img {
+        display: none !important;
+        /* Hide logo images on mobile to save space */
+    }
+
+    .product-card-name {
+        font-size: 13px !important;
+        color: #0f172a !important;
+        font-weight: 600 !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+    }
+
+    .product-card-item:hover .product-card-name {
+        color: #0150a9 !important;
+    }
+
+    .product-card-item.view-all-card {
+        justify-content: flex-start !important;
+        background: transparent !important;
+        border-style: dashed !important;
+        border-color: #cbd5e1 !important;
+    }
+
+    .product-card-icon {
+        display: none !important;
+    }
+
+    /* Tech & Services Mobile Styles */
+    .mega-menu-column {
+        margin-bottom: 18px !important;
+    }
+
+    .dropdown-menu.new-tech .tech-menu-topbar,
+    .dropdown-menu.new-service .svc-menu-topbar {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 10px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    .dropdown-menu.new-tech .tech-topbar-icon,
+    .dropdown-menu.new-service .svc-topbar-icon {
+        width: 26px !important;
+        height: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 7px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .dropdown-menu.new-tech .tech-topbar-icon {
+        background: linear-gradient(135deg, #0150a9 0%, #2563eb 100%) !important;
+        color: #ffffff !important;
+    }
+
+    .dropdown-menu.new-service .svc-topbar-icon {
+        background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+        color: #ffffff !important;
+    }
+
+    .dropdown-menu.new-tech .tech-topbar-icon i,
+    .dropdown-menu.new-service .svc-topbar-icon i {
+        color: #ffffff !important;
+        font-size: 12px !important;
+    }
+
+    .dropdown-menu.new-tech .tech-topbar-title,
+    .dropdown-menu.new-service .svc-topbar-title {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+    }
+
+    .dropdown-menu.new-tech .tech-topbar-count,
+    .dropdown-menu.new-service .svc-topbar-count {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        color: #2563eb !important;
+        background: #eff6ff !important;
+        border: 1px solid #bfdbfe !important;
+        border-radius: 999px !important;
+        padding: 3px 8px !important;
+        margin-left: auto !important;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-section-title {
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 2px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-transform: uppercase;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-list .nav-link {
+        font-size: 12.5px !important;
+        color: #475569 !important;
+        padding: 7px 8px !important;
+        border-radius: 8px !important;
+        line-height: 1.35 !important;
+    }
+
+    .second-navbar .dropdown-menu .mega-menu-list .nav-link:hover {
+        color: #0150a9 !important;
+        background-color: #f0f7ff !important;
+    }
+
+    .menu-badge {
+        font-size: 8px;
+        padding: 1px 4px;
+        border-radius: 3px;
+        margin-left: 6px;
+    }
+}
+
+/* ============================================================
+   CASE STUDY MEGA MENU STYLES
+   ============================================================ */
+
+.casestudy-li .product-card-name {
+    font-size: 14px !important;
+}
+@media (max-width: 1200px) {
+    .casestudy-li .product-card-name {
+        font-size: 13px !important;
+    }
+}
+
+/* Base icon styles and gradients */
+.casestudy-li .product-card-icon {
+    display: flex !important;
+    color: #ffffff !important;
+}
+
+/* Fix for view all card icon color (override the white color) */
+.casestudy-li .view-all-card .product-card-icon {
+    color: #64748b !important;
+}
+.casestudy-li .view-all-card:hover .product-card-icon {
+    color: #ffffff !important;
+}
+
+.cs-icon-invoice { background: linear-gradient(135deg, #0284c7, #38bdf8) !important; }
+.cs-icon-copra { background: linear-gradient(135deg, #d97706, #fbbf24) !important; }
+.cs-icon-chatbot { background: linear-gradient(135deg, #7c3aed, #a78bfa) !important; }
+.cs-icon-biscuit { background: linear-gradient(135deg, #ea580c, #fb923c) !important; }
+.cs-icon-bottle { background: linear-gradient(135deg, #059669, #34d399) !important; }
+.cs-icon-vehicle { background: linear-gradient(135deg, #2563eb, #60a5fa) !important; }
+.cs-icon-rfid { background: linear-gradient(135deg, #db2777, #f472b6) !important; }
+.cs-icon-emp-mon { background: linear-gradient(135deg, #475569, #94a3b8) !important; }
+.cs-icon-med-img { background: linear-gradient(135deg, #0d9488, #2dd4bf) !important; }
+.cs-icon-autopilot { background: linear-gradient(135deg, #4338ca, #818cf8) !important; }
+
+/* Keep gradients on hover */
+.casestudy-li .product-card-item:hover .cs-icon-invoice { background: linear-gradient(135deg, #0284c7, #38bdf8) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-copra { background: linear-gradient(135deg, #d97706, #fbbf24) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-chatbot { background: linear-gradient(135deg, #7c3aed, #a78bfa) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-biscuit { background: linear-gradient(135deg, #ea580c, #fb923c) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-bottle { background: linear-gradient(135deg, #059669, #34d399) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-vehicle { background: linear-gradient(135deg, #2563eb, #60a5fa) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-rfid { background: linear-gradient(135deg, #db2777, #f472b6) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-emp-mon { background: linear-gradient(135deg, #475569, #94a3b8) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-med-img { background: linear-gradient(135deg, #0d9488, #2dd4bf) !important; }
+.casestudy-li .product-card-item:hover .cs-icon-autopilot { background: linear-gradient(135deg, #4338ca, #818cf8) !important; }
+.cs-icon-emp-mon { background: linear-gradient(135deg, #475569, #94a3b8) !important; }
+.cs-icon-med-img { background: linear-gradient(135deg, #0d9488, #2dd4bf) !important; }
+.cs-icon-autopilot { background: linear-gradient(135deg, #4338ca, #818cf8) !important; }
+
+/* Animations for case study icons */
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes wiggleIcon {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.casestudy-li .product-card-item:hover .cs-icon-invoice i { animation: bounceIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-copra i { animation: pulseIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-chatbot i { animation: wiggleIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-biscuit i { animation: bounceIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-bottle i { animation: pulseIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-vehicle i { animation: wiggleIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-rfid i { animation: bounceIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-emp-mon i { animation: pulseIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-med-img i { animation: bounceIcon 0.5s ease-in-out; }
+.casestudy-li .product-card-item:hover .cs-icon-autopilot i { animation: wiggleIcon 0.5s ease-in-out; }
+
+/* ============================================================
+   TECHNOLOGY MEGA-MENU — ENHANCED DESIGN (desktop only)
+   ============================================================ */
+@media (min-width: 1111px) {
+
+    /* Top branding bar */
+    .dropdown-menu.new-tech .tech-menu-topbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .tech-topbar-icon {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0150a9 0%, #2563eb 100%);
+        border-radius: 7px;
+        color: #ffffff;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .tech-topbar-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.1px;
+    }
+
+    .tech-topbar-count {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #0150a9;
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        padding: 2px 9px;
+        border-radius: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    /* Section title icon pill backgrounds */
+    .dropdown-menu.new-tech .mega-menu-section-title i {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #eff6ff;
+        border-radius: 5px;
+        font-size: 10.5px !important;
+        color: #0150a9 !important;
+    }
+
+    /* Category colour — UI Design (violet) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-violet i {
+        background: #f5f3ff !important;
+        color: #7c3aed !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-violet {
+        border-bottom-color: #7c3aed !important;
+    }
+
+    /* Category colour — Cloud (cyan) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-cyan i {
+        background: #ecfeff !important;
+        color: #0891b2 !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-cyan {
+        border-bottom-color: #0891b2 !important;
+    }
+
+    /* Category colour — Data & Analytics (emerald) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-emerald i {
+        background: #ecfdf5 !important;
+        color: #059669 !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-emerald {
+        border-bottom-color: #059669 !important;
+    }
+
+    /* Category colour — Web Servers (amber) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-amber i {
+        background: #fffbeb !important;
+        color: #d97706 !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-amber {
+        border-bottom-color: #d97706 !important;
+    }
+
+    /* Category colour — Testing (red) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-red i {
+        background: #fef2f2 !important;
+        color: #dc2626 !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-red {
+        border-bottom-color: #dc2626 !important;
+    }
+
+    /* Category colour — Software Process (slate) */
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-slate i {
+        background: #f1f5f9 !important;
+        color: #475569 !important;
+    }
+
+    .dropdown-menu.new-tech .mega-menu-section-title.ti-slate {
+        border-bottom-color: #94a3b8 !important;
+    }
+
+    /* AI stack chip tags */
+    .ai-tech-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 14px;
+    }
+
+    .ai-chip {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.65);
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 3px 8px;
+        border-radius: 20px;
+        letter-spacing: 0.2px;
+        transition: all 0.2s ease;
+    }
+
+    .ai-chip:hover {
+        background: rgba(56, 189, 248, 0.15);
+        border-color: rgba(56, 189, 248, 0.3);
+        color: #7dd3fc;
+    }
+
+    /* AI panel deeper gradient */
+    .dropdown-menu.new-tech .menu-featured-card {
+        background: linear-gradient(155deg, #0c1a2e 0%, #0f2d4e 50%, #091929 100%) !important;
+        padding-bottom: 28px !important;
+    }
+
+    .dropdown-menu.new-tech .menu-featured-card .featured-links-list {
+        padding-bottom: 8px;
+    }
+
+    /* Tri-colour accent line at panel bottom */
+    .dropdown-menu.new-tech .menu-featured-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #0150a9, #38bdf8, #6366f1);
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* Laptop/Smaller Desktop Specific Adjustments to prevent dropdown overlap & control grid columns */
+
+/* Tablet Portrait (768px - 991px) */
+@media (min-width: 1111px) and (max-width: 1280px) {
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        width: 92vw !important;
+        left: 50% !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .product-card-item {
+        padding: 8px 10px !important;
+        gap: 8px !important;
+    }
+
+    .product-card-img {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 4px !important;
+    }
+
+    .product-card-name {
+        font-size: 11px !important;
+    }
+}
+
+/* Small Desktop (992px - 1199px) */
+@media (min-width: 1281px) and (max-width: 1499px) {
+
+    .second-navbar .dropdown-menu.new-tech,
+    .second-navbar .dropdown-menu.new-service {
+        width: 86vw !important;
+    }
+
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        width: 86vw !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .product-card-item {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+    }
+
+    .product-card-name {
+        font-size: 11.5px !important;
+    }
+
+    .menu-featured-card {
+        padding: 16px !important;
+    }
+}
+
+/* Medium Desktop (1200px - 1299px) */
+@media (min-width: 1500px) and (max-width: 1599px) {
+
+    .second-navbar .dropdown-menu.new-tech,
+    .second-navbar .dropdown-menu.new-service {
+        width: 82vw !important;
+    }
+
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        width: 82vw !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .product-card-item {
+        padding: 11px 14px !important;
+    }
+
+    .product-card-name {
+        font-size: 12px !important;
+    }
+
+    .menu-featured-card {
+        padding: 16px !important;
+    }
+}
+
+/* Large Desktop (1300px - 1759px) */
+@media (min-width: 1600px) and (max-width: 1759px) {
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        width: 80vw !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .product-card-item {
+        padding: 11px 14px !important;
+    }
+
+    .product-card-name {
+        font-size: 12px !important;
+    }
+}
+
+/* Extra Large Desktop (>= 1760px) */
+@media (min-width: 1760px) {
+    .second-navbar .dropdown-menu.new-tech.product__list {
+        left: 50% !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+
+    .product-card-item {
+        padding: 12px 18px !important;
+        gap: 14px !important;
+    }
+
+    .product-card-name {
+        font-size: 13px !important;
+    }
+
+    .menu-featured-card {
+        padding: 16px 20px !important;
+    }
+
+}
+
+/* ============================================================
+   SERVICES MEGA-MENU — ENHANCED DESIGN (desktop only)
+   ============================================================ */
+@media (min-width: 1111px) {
+
+    /* Top branding bar */
+    .dropdown-menu.new-service .svc-menu-topbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .svc-topbar-icon {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+        border-radius: 7px;
+        color: #ffffff;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .svc-topbar-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.1px;
+    }
+
+    .svc-topbar-count {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #6d28d9;
+        background: #f5f3ff;
+        border: 1px solid #ddd6fe;
+        padding: 2px 9px;
+        border-radius: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    /* Section title icon pill — services default (blue) */
+    .dropdown-menu.new-service .mega-menu-section-title i {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #eff6ff;
+        border-radius: 5px;
+        font-size: 10.5px !important;
+        color: #0150a9 !important;
+    }
+
+    /* Development — blue (brand default, explicit) */
+    .dropdown-menu.new-service .mega-menu-section-title.si-blue i {
+        background: #eff6ff !important;
+        color: #0150a9 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-blue {
+        border-bottom-color: #0150a9 !important;
+    }
+
+    /* Online Marketing — orange */
+    .dropdown-menu.new-service .mega-menu-section-title.si-orange i {
+        background: #fff7ed !important;
+        color: #ea580c !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-orange {
+        border-bottom-color: #ea580c !important;
+    }
+
+    /* Consultant — indigo */
+    .dropdown-menu.new-service .mega-menu-section-title.si-indigo i {
+        background: #eef2ff !important;
+        color: #4f46e5 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-indigo {
+        border-bottom-color: #4f46e5 !important;
+    }
+
+    /* Mobile Apps — teal */
+    .dropdown-menu.new-service .mega-menu-section-title.si-teal i {
+        background: #f0fdfa !important;
+        color: #0d9488 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-teal {
+        border-bottom-color: #0d9488 !important;
+    }
+
+    /* Creative Design — pink */
+    .dropdown-menu.new-service .mega-menu-section-title.si-pink i {
+        background: #fdf2f8 !important;
+        color: #db2777 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-pink {
+        border-bottom-color: #db2777 !important;
+    }
+
+    /* Latest Tech — purple */
+    .dropdown-menu.new-service .mega-menu-section-title.si-purple i {
+        background: #f5f3ff !important;
+        color: #7c3aed !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-purple {
+        border-bottom-color: #7c3aed !important;
+    }
+
+    /* Software Products — deep blue */
+    .dropdown-menu.new-service .mega-menu-section-title.si-deep-blue i {
+        background: #eff6ff !important;
+        color: #1d4ed8 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-deep-blue {
+        border-bottom-color: #1d4ed8 !important;
+    }
+
+    /* Testing — red */
+    .dropdown-menu.new-service .mega-menu-section-title.si-red i {
+        background: #fef2f2 !important;
+        color: #dc2626 !important;
+    }
+
+    .dropdown-menu.new-service .mega-menu-section-title.si-red {
+        border-bottom-color: #dc2626 !important;
+    }
+
+    /* Services panel gradient (purple-dark) */
+    .dropdown-menu.new-service .menu-featured-card {
+        background: linear-gradient(155deg, #1a0533 0%, #2d1057 50%, #160428 100%) !important;
+    }
+
+    /* Bottom tri-colour accent — purple/pink */
+    .dropdown-menu.new-service .menu-featured-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #6d28d9, #a855f7, #ec4899);
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+/* ============================================================
+   CASE STUDY MEGA-MENU — SCOPED STYLES (desktop + mobile)
+   ============================================================ */
+
+/* --- Desktop --- */
+@media (min-width: 1111px) {
+
+    /* Parent li — relative so dropdown positions relative to it */
+    .second-navbar .casestudy-li {
+        position: relative !important;
+    }
+
+    /* Hover-bridge so cursor can travel from link to dropdown */
+    .second-navbar .casestudy-li>a.nav-link {
+        position: relative !important;
+    }
+
+    .second-navbar .casestudy-li>a.nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 10px;
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    /* Dropdown container — narrower than Tech/Service, left-aligned relative to parent */
+    .second-navbar .dropdown-menu.new-casestudy {
+        display: none;
+        position: absolute;
+        width: 40vw !important;
+        max-width: calc(100vw - 30px) !important;
+        left: 0 !important;
+        right: auto !important;
+        top: 100% !important;
+        transform: translateY(12px) !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+        padding: 12px 20px 6px !important;
+        margin-top: 0 !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 9999 !important;
+        line-height: 1.5 !important;
+        overflow: visible !important;
+    }
+
+    /* Show on hover */
+    .second-navbar .casestudy-li:hover>.dropdown-menu.new-casestudy {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Top branding bar — reuse svc-menu-topbar structure */
+    .dropdown-menu.new-casestudy .svc-menu-topbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-icon {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+        border-radius: 7px;
+        color: #ffffff;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.1px;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-count {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #0d9488;
+        background: #f0fdfa;
+        border: 1px solid #99f6e4;
+        padding: 2px 9px;
+        border-radius: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    /* Section title icon pill */
+    .dropdown-menu.new-casestudy .mega-menu-section-title i {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff7ed;
+        border-radius: 5px;
+        font-size: 10.5px !important;
+        color: #ea580c !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-section-title.si-orange i {
+        background: #fff7ed !important;
+        color: #ea580c !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-section-title.si-orange {
+        border-bottom-color: #ea580c !important;
+    }
+
+    /* Force section titles to stay on one line */
+    .dropdown-menu.new-casestudy .mega-menu-section-title {
+        white-space: nowrap !important;
+    }
+
+    /* Mega-menu column & link styles */
+    .dropdown-menu.new-casestudy .mega-menu-column {
+        margin-bottom: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-list .nav-link {
+        font-size: 12.5px !important;
+        color: #475569 !important;
+        padding: 6px 0 !important;
+        display: block !important;
+        transition: color 0.2s ease !important;
+        background: transparent !important;
+        border: none !important;
+        text-transform: none !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-list .nav-link:hover {
+        color: #0150a9 !important;
+    }
+}
+
+/* Case Study responsive breakpoints */
+@media (min-width: 1111px) and (max-width: 1280px) {
+    .second-navbar .dropdown-menu.new-casestudy {
+        width: 80vw !important;
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1499px) {
+    .second-navbar .dropdown-menu.new-casestudy {
+        width: 50vw !important;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1599px) {
+    .second-navbar .dropdown-menu.new-casestudy {
+        width: 42vw !important;
+    }
+}
+
+/* --- Mobile --- */
+@media (max-width: 1110px) {
+    .second-navbar .dropdown-menu.new-casestudy {
+        position: static !important;
+        float: none !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: auto !important;
+        transform: none !important;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+        border: 1px solid #e2e8f0 !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        border-radius: 14px !important;
+        padding: 12px 12px 10px !important;
+        margin-top: 10px !important;
+        overflow: visible !important;
+    }
+
+    .dropdown-menu.new-casestudy .svc-menu-topbar {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 10px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-icon {
+        width: 26px !important;
+        height: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 7px !important;
+        flex-shrink: 0 !important;
+        background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%) !important;
+        color: #ffffff !important;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-icon i {
+        color: #ffffff !important;
+        font-size: 12px !important;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-title {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+    }
+
+    .dropdown-menu.new-casestudy .svc-topbar-count {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        color: #0d9488 !important;
+        background: #f0fdfa !important;
+        border: 1px solid #99f6e4 !important;
+        border-radius: 999px !important;
+        padding: 3px 8px !important;
+        margin-left: auto !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-section-title {
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 2px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-transform: uppercase;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-list .nav-link {
+        font-size: 12.5px !important;
+        color: #475569 !important;
+        padding: 7px 8px !important;
+        border-radius: 8px !important;
+        line-height: 1.35 !important;
+    }
+
+    .dropdown-menu.new-casestudy .mega-menu-list .nav-link:hover {
+        color: #0150a9 !important;
+        background-color: #f0f7ff !important;
+    }
+}
