@@ -4359,7 +4359,7 @@
           title: "How To Integrate SharePoint With ERP Systems For Better Workflows",
           categoryId: "28",
           category: "Enterprise Resource Planning",
-          image: "../blog/2026/09/1788940932.png",
+          image: "../blog/2026/09/1788941417.png",
           description: "Improve enterprise workflows by connecting SharePoint content with ERP processes.",
           url: "post/how-to-integrate-sharepoint-with-erp-systems-for-better-workflows.html",
         },
@@ -4381,11 +4381,11 @@
         var html = visibleBlogs
           .map(function (blog) {
             return '<div class="col-md-6 col-lg-6"><div class="blog-glass-card">' +
-              '<img src="#" class="blog-glass-img" alt="' + blog.title + '">' +
+              '<img src="' + blog.image + '" class="blog-glass-img" alt="' + blog.title + '" loading="lazy">' +
               '<div class="blog-glass-content"><div class="blog-glass-cat"><span>' +
               blog.category + '</span><span class="blog-glass-date">Sep 2026</span></div>' +
               '<h4 class="blog-glass-title">' + blog.title + '</h4><p class="blog-glass-desc">' +
-              blog.description + '</p><div class="blog-glass-footer"><a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>' +
+              blog.description + '</p><div class="blog-glass-footer"><a href="' + blog.url + '" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a></div>' +
               '</div></div></div>';
           })
           .join("");
